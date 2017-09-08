@@ -20,8 +20,9 @@ console.log('Loaded!');
         var interval = setInterval(moveRight , 10) ;
         };
   */ 
-  
-  //counter Code
+
+/*
+   //counter Code
   var button = document.getElementById('counter');
  // var counter = 0 ;
   button.onclick = function()
@@ -44,17 +45,17 @@ console.log('Loaded!');
           }
       };
       
-      /*
-      //Render the variable in the correct span 
-      counter = counter + 1 ;
-      var span = document.getElementById('count') ;
-      span.innerHTML = counter.toString() ;
-      */
+      /*      //Render the variable in the correct span 
+                counter = counter + 1 ;
+                var span = document.getElementById('count') ;
+                span.innerHTML = counter.toString() ;      */
       
       //Make the request
       request.open('GET' , 'http://aditigoyal.imad.hasura-app.io/counter',true);
       request.send(null);
   };
+  */
+ 
   
   //Submit name
   var nameInput = document.getElementById('name') ;
