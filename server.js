@@ -26,7 +26,7 @@ var articles =
      `article-two` : {
     title: 'Article Two | Aditi Goyal',
     heading:'Article Two',
-    date:'Sept  9 ,2017',
+    date:'Sept  10 ,2017',
     content:
                 `   
                 <p>
@@ -44,8 +44,7 @@ var articles =
                    This is content of my Three Article. 
                 </p>
                 `
-}
-};
+}  };
 
 function createTemplate(data)
 {
