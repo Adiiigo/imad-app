@@ -55,8 +55,7 @@ console.log('Loaded!');
   };
   
   //Submit name
-  var nameInput = document.getElementById('name') ;
-  var name = nameInput.value ;
+
   var submit = document.getElementById('submit_btn');
   
   submit.onclick = function()
@@ -89,6 +88,8 @@ console.log('Loaded!');
       };
 
       //Make the request
+      var nameInput = document.getElementById('name') ;
+      var name = nameInput.value ;
       request.open('GET' , 'http://aditigoyal.imad.hasura-app.io/submit-name?name=' + name,true);
       request.send(null);
   };
