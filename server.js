@@ -1,6 +1,10 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+
+var app = express();
+app.use(morgan('combined'));
+
 var Pool = require('pg').Pool ;
 var config = {
     user : 'aditigoyal',
@@ -9,8 +13,6 @@ var config = {
     port: '5432',
     password:process.env.DB_PASSWORD
 };
-var app = express();
-app.use(morgan('combined'));
 
 var articles = 
 {
@@ -93,10 +95,6 @@ function createTemplate(data)
     return htmlTemplate ; 
 }
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 var pool = new Pool(config) ;
 app.get('/tets-db',function(req,res)
 {
@@ -113,6 +111,9 @@ app.get('/tets-db',function(req,res)
             res.send(JSON.stringify(result));
         }
     });
+});
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 var counter = 0 ;
