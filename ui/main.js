@@ -21,9 +21,8 @@ console.log('Loaded!');
         };
   */ 
 
-/*
-   //counter Code
-  var button = document.getElementById('counter');
+ //counter Code
+ var button = document.getElementById('counter');
  // var counter = 0 ;
   button.onclick = function()
   {
@@ -54,8 +53,6 @@ console.log('Loaded!');
       request.open('GET' , 'http://aditigoyal.imad.hasura-app.io/counter',true);
       request.send(null);
   };
-  */
- 
   
   //Submit name
   var nameInput = document.getElementById('name') ;
@@ -64,14 +61,34 @@ console.log('Loaded!');
   
   submit.onclick = function()
   {
-      //make a request to server and senf the name
-      //capture a list of name and render it as list
-      var names = ['name1' , 'name2' , 'name3'] ;
-      var list = '';
-      for(var i = 0 ;i <names.length ; i++)
+      
+      //Create a request object
+      var request = new XMLHttpRequest() ;
+      
+      //Capture the response and store in a variable
+      request.onreadystatechange = function()
       {
-          list += '<li>' + names[i] + '</li>' ;
-      }
-      var ul = document.getElementById('namelist') ;
-      ul.innerHTML = list ;
+          if(request.readyState === XMLHttpRequest.DONE)
+          {
+             //Take Some Action
+             if(request.status === 200)
+             {
+                  //make a request to server and senf the name
+                  //capture a list of name and render it as list
+                  var names = request.responseText ;
+                  names = JSON.parse(names);
+                  var list = '';
+                  for(var i = 0 ;i <names.length ; i++)
+                  {
+                      list += '<li>' + names[i] + '</li>' ;
+                  }
+                  var ul = document.getElementById('namelist') ;
+                  ul.innerHTML = list ;
+             }
+          }
+      };
+
+      //Make the request
+      request.open('GET' , 'http://aditigoyal.imad.hasura-app.io/submit-name?name=' + name,true);
+      request.send(null);
   };
