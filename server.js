@@ -47,7 +47,7 @@ function createTemplate(data)
                 </DIV>
                 <HR/>
                 <H3>
-                    ${haeding}
+                    ${heading}
                 </H3>
                 <DIV>
                     ${date}
