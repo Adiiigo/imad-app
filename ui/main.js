@@ -55,3 +55,14 @@ console.log('Loaded!');
       request.open('GET' , 'http://aditigoyal.imad.hasura-app.io/counter',true);
       request.send(null);
   };
+  
+  //Submit name
+  var nameInput = document.getElementById('name') ;
+  var name = nameInput.value ;
+  var submit = document.getElementById('submit_btn');
+  
+  submit.onclick = function()
+  {
+      //make a request to server and senf the name
+      //capture a list of name and render it as list
+  };
