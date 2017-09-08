@@ -30,7 +30,7 @@ console.log('Loaded!');
       var request = new XMLHttpRequest() ;
       
       //Capture the response and store in a variable
-      request.onreadyststatechange = function()
+      request.onreadystatechange = function()
       {
           if(request.readystate === XMLHttpRequest.DONE)
           {
