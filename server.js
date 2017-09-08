@@ -5,6 +5,30 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne =
+{
+    title: 'Article one | Aditi Goyal',
+    heading:'Article One',
+    date:'Sept  9 ,2017',
+    content:`   <p>
+                   This is content of my First Article. This is content of my First Article.This is content of my First Article.This is content of my First Article.
+                </p>
+                
+                <p>
+                    This is content of my First Article.This is content of my First Article.This is content of my First Article.This is content of my First Article.
+                </p>
+                
+                 <p>
+                    This is content of my First Article.This is content of my First Article.This is content of my First Article.This is content of my First Article.
+                </p>`
+};
+
+var htmlTemplate = `
+
+
+
+`;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
