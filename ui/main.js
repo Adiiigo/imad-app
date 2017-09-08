@@ -69,7 +69,7 @@ console.log('Loaded!');
       var list = '';
       for(var i = 0 ;i <names.length ; i++)
       {
-          list += '<li> + name[i] + </li>' ;
+          list += `<li> + name[i] + </li>` ;
       }
       var ul = document.getElementById('namelist') ;
       ul.innerHTML = list ;
