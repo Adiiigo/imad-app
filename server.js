@@ -44,7 +44,8 @@ var articles =
                    This is content of my Three Article. 
                 </p>
                 `
-}  };
+} 
+};
 
 function createTemplate(data)
 {
