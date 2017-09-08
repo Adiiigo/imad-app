@@ -23,12 +23,44 @@ var articleOne =
                 </p>`
 };
 
-var htmlTemplate = `
-
-
-
-`;
-
+function createTemplate(data)
+{
+    var title = data.title ;
+    var date = data.date ;
+    var heading = data.heading ;
+    var content = data.content ;
+    
+    var htmlTemplate = 
+    `
+    <HTML>
+        <HEAD>
+            <TITLE>
+               ${title}     
+            </TITLE>
+            <meta name="viewport" content="width=device-width , intial-scale=1"/>
+            <link href="/ui/style.css" rel="stylesheet" />
+        </HEAD>
+        <BODY>
+            <DIV class="container">
+                <DIV>
+                    <A HREF="/">HOME</A>
+                </DIV>
+                <HR/>
+                <H3>
+                    ${haeding}
+                </H3>
+                <DIV>
+                    ${date}
+                </DIV>
+                <DIV>
+                    ${content}
+                </DIV>
+            </DIV>
+        </BODY>
+    </HTML>
+    `;
+    return htmlTemplate ; 
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
