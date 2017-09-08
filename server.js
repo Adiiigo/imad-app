@@ -37,7 +37,7 @@ var articles =
      'article-three' : {
     title: 'Article Three | Aditi Goyal',
     heading:'Article Three',
-    date:'Sept  9 ,2017',
+    date:'Sept  11 ,2017',
     content:
                 `   
                 <p>
