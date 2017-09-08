@@ -52,5 +52,7 @@ console.log('Loaded!');
       span.innerHTML = counter.toString() ;
       */
       
-      //Make a request
+      //Make the request
+      request.open('GET' , 'http://aditigoyal.imad.hasura-app.io/counter',true);
+      request.send(null);
   };
