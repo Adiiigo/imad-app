@@ -32,7 +32,7 @@ console.log('Loaded!');
       //Capture the response and store in a variable
       request.onreadystatechange = function()
       {
-          if(request.readystate === XMLHttpRequest.DONE)
+          if(request.readyState === XMLHttpRequest.DONE)
           {
              //Take Some Action
              if(request.status === 200)
@@ -42,7 +42,6 @@ console.log('Loaded!');
                  span.innerHTML = counter.toString() ;
              }
           }
-          
       };
       
       /*
