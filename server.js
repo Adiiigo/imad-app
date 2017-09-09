@@ -140,9 +140,9 @@ app.get('/:articleName',function(req,res)
 });
 */
 
-app.get('/article_html/:articleName',function(req,res)
+app.get('/article1/:articleName',function(req,res)
 {
-     pool.query("Select * from article_html where title = '" + req.params.articleName + "'" , function(res,result)
+     pool.query("Select * from article1 where title = '" + req.params.articleName + "'" , function(res,result)
      {
          if(err)
          {
@@ -160,8 +160,7 @@ app.get('/article_html/:articleName',function(req,res)
                  res.send(createTemplate(articleData)) ;
              }
          }
-     }) ;
-     
+     });
 });
 
 app.get('/ui/style.css', function (req, res) {
