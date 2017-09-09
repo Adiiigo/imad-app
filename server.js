@@ -96,6 +96,7 @@ function createTemplate(data)
 }
 
 var pool = new Pool(config) ;
+
 app.get('/test-db',function(req,res)
 {
     //Make a select query   
