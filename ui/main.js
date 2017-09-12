@@ -1,7 +1,7 @@
 /*MODULE P4
 
 console.log('Loaded!');
-
+*/
 
     //Change the text of the main-text div
     var element = document.getElementById('mainElement');
@@ -19,7 +19,7 @@ console.log('Loaded!');
     img.onclick = function() {
         var interval = setInterval(moveRight , 10) ;
         };
-  */ 
+ 
 
  //counter Code
  var button = document.getElementById('counter');
